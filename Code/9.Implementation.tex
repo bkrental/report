@@ -8,7 +8,7 @@ In this chapter, we present the process of implementing the system. Up to the en
 \end{itemize}
 
 \section{Mockup interface}
-We have implemented the mockup interface in Figma for the Tenant Landing Page, Search page, Rental detail page and Chatbot interface.
+We have implemented the mockup interface in Figma for the Tenant Landing Page, Search page, Rental detail page and Chatbot interface. All of the mockup interfaces are in \href{https://www.figma.com/proto/4W6eMgIgZQaSfi5h8Mn8Af/Material-UI-for-Figma-(and-MUI-X)-(Community)-(Copy)?page-id=4230%3A722&type=design&node-id=6609-8548&viewport=4481%2C1065%2C1&t=QoVk3s8CM7w3qcvh-1&scaling=scale-down-width&starting-point-node-id=6759%3A76810}{here}
 
 \subsection{Tenant pages}
 We have a tenant landing page that allows the user to view the list of rental posts in the system. You can see the design in Figure \ref{fig:tenant-landing-page}
@@ -117,6 +117,7 @@ We have landlord pages that allow the landlord to post their rental information 
     \label{fig:update_rental}
 \end{figure}
 
+\clearpage
 
 \section{Crawler service}
 
@@ -167,12 +168,23 @@ def parse_detail_info(self, response):
     }
 \end{lstlisting}
 
-\section{Intent classification model}
-We have implemented the intent classification model as discussed in \ref{sec:intent-classification-model} with Pytorch and PhoBERT library. The model is trained on the dataset containing 1000 labeled messages. We split the dataset into 2 parts: 80\% for training and 20\% for testing. We trained the model for 10 epochs with a batch size of 32. Figure \ref{fig:intent-classification-result} shows the accuracy of the model during the training process. Overall, the model achieves an accuracy of 97.4\% on the training set and 96.5\% on the test set. 
+After crawling, we got the data in CSV format with \textbf{12288 rows}. Each row is a rental post with the following fields: name, address, price, area, description, owner name, owner contact, post date, and the link to the original post. Figure \ref{fig:sample-crawling-data} shows the sample data returned by the crawler. 
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/9.Implementation/intent_classifier_accuracy.png} 
+    \includegraphics[width=0.8\textwidth]{Images/9.Implementation/sample_crawling_data.png}
+    \caption{The sample data returned by the crawler}
+    \label{fig:sample-crawling-data}
+\end{figure}
+
+The full dataset can be found \href{https://www.kaggle.com/datasets/ef8770394a7256fd4e5270fd4a3692235a620fc85ac18128efd1b44d31aa5b1b}{here}.
+
+\section{Intent classification model}
+We have implemented the intent classification model as discussed section in \ref{sec:intent-classification-model} with Pytorch and PhoBERT library. The model is trained on the dataset containing 1000 labeled messages. We split the dataset into 2 parts: 80\% for training and 20\% for testing. We trained the model for 10 epochs with a batch size of 32. Figure \ref{fig:intent-classification-result} shows the accuracy of the model during the training process. Overall, the model achieves an accuracy of 97.4\% on the training set and 96.5\% on the test set. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Images/9.Implementation/intent_classifier_accuracy.png} 
     \caption{The accuracy of the intent classification model during the training process}
     \label{fig:intent-classification-accuracy}
 \end{figure}

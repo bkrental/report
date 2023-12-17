@@ -329,11 +329,11 @@ Before using the application, user must sign up or log in with an account. There
 \textbf{Pre-condition(s)}  & Tenant had account and logged in successfully  \\
 \textbf{Post-condition(s)} & Tenant can contact with Landlord~                                                  \\
 \textbf{Trigger(s)}        & Tenant click on "Message Icon" on rental detail post, or on Landlord profile page~  \\
-\textbf{Normal flows}      & {Normal flow 1: Tenant send message to Landlord for the first time\\1. Tenant clicks on the Icon\\2. System added Landlord into contact list\\3. System opens message section\\4. Tenant enters message into chat input\\5. System sends message to correspond Landlord\\6. Tenant click on "Close Button" the message section\\7. System closes the message section\\Use case ends} \\
-\textbf{Alternative flow}  & {Alternative 1: at step 6 - Landlord responses\\1.1. Tenant receives message\\Return in step 5\\Alternative 2: Tenant contact with Landlord before\\2.1. Tenant clicks on "Message Icon" on the main page\\2.2. System opens the message section with chat list\\2.3. Tenant choose the existed Landlord\\Continue at step 3 in normal flow}                                     \\
+\textbf{Normal flows}      & {Normal flow 1: Tenant sends a message to Landlord for the first time\\1. The tenant clicks on the Icon\\2. The system added the Landlord to the contact list. System opens message section\\4. The tenant enters the message into chat input\\5. The system sends a message to the corresponding Landlord\\6. Tenant clicks on "Close Button" in the message section\\7. System closes the message section\\Use case ends} \\
+\textbf{Alternative flow}  & {Alternative 1: at step 6 - Landlord responses\\1.1. Tenant receives message\\Return in step 5\\Alternative 2: Tenant contact with Landlord before\\2.1. Tenant clicks on "Message Icon" on the main page\\2.2. The system opens the message section with chat list\\2.3. Tenant choose the existed Landlord\\Continue at step 3 in normal flow}                                     \\
 \textbf{Exception flow}    & {No exception}
 \end{longtblr}
-    \caption{Use case scenario: Tenant sends message to Landlord}
+    \caption{Use case scenario: Tenant sends a message to Landlord}
     \label{tab:usecase-scenario-tenant-send-message}
 \end{table}
 
@@ -341,7 +341,6 @@ Before using the application, user must sign up or log in with an account. There
 %%%%%%%%%% Rental system: Landlord %%%%%%%%%%%%%%%
 \newpage
 \subsection{Rental system: Landlord view}
-The same as Tenant
 \subsubsection{Use case diagram}
 \begin{figure}[H]
     \centering
@@ -956,7 +955,7 @@ The sequence diagram describes how the Landlord can update the information of a 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Images/Sequence/seq_diag_delete_rental_inventory.png}
-    \caption{Caption}
+    \caption{Sequence diagram: Deleting rental inventory}
     \label{fig:enter-label}
 \end{figure}
 \noindent \textbf{Explanation:}\\

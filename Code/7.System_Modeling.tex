@@ -24,6 +24,8 @@ Furthermore, we also decided to implement an API Gateway. The API Gateway is lik
 
 In addition, we decided to use a shared database for our system in this phase. The purpose of using a shared Database is to simplify schema management and to make data retrieval more efficient since all relevant information is stored in a centralized database, services can access the necessary data without the need for complex communication protocols.
 
+\clearpage
+
 \section{Intent specification}
 We define the intents of our system as follows:
 
@@ -175,16 +177,13 @@ The database should be able to store data related to the services according to t
 Next, we need to specify the relationships between these entities. The relationship can be described based on the specifications as follows:
 \begin{itemize}
     \item A user can have zero or many rentals, and a rental can be associated with zero or many users (because some rentals might be crawled from the internet)
-    \item A user can have zero or many feedback, while feedback must be associated with exactly one user. A user will have 2 view: user as the Tenant and user as the Landlord. By that reason, a User should have 2 type of feedback: Landlord feedback and Tenant feedback.
+    \item A user can have zero or many feedback, while feedback must be associated with exactly one user. A user will have 2 views: user as the Tenant and user as the Landlord. For that reason, a User should have 2 types of feedback: Landlord feedback and Tenant feedback.
     \item A rental can have zero or many images, while each image must belong to exactly one rental.
-    \item A rental can have zero or many room (bedrooms, living-rooms, bathrooms,...), while each room must belong to exactly one rental.
+    \item A rental can have zero or many rooms (bedrooms, living rooms, bathrooms,...), while each room must belong to exactly one rental.
     \item A rental can have zero or many furniture (washing machine, stove, Wi-Fi, ...), while each furniture must belong to exactly one rental.
-    \item A rental will also have zero or multiple feedback, and a rental feedback must also belongs to exactly one rental. 
-    \item A user has one favorite rental list, and the list can contains zero or many rental.
-    \item A User can receive notifications. Therefore, a user should be associated with multiple notification. Moreover, a notification can be published to multiple user.
-    \item A user can join in multiple chat-room, while each chat-room should contains exactly 2 members (user - user or user - chat-bot).
-    \item A chat-room also contains multiple messages, while a message must belongs to exactly 1 chat-room. 
+    \item A rental will also have zero or multiple feedback, and a rental feedback must also belong to exactly one rental. 
+    \item A user has one favorite rental list, and the list can contain zero or many rentals.
+    \item A User can receive notifications. Therefore, a user should be associated with multiple notifications. Moreover, a notification can be published to multiple users.
+    \item A user can join multiple chat rooms, while each chat room should contain exactly 2 members (user - user or user - chat-bot).
+    \item A chat room also contains multiple messages, while a message must belong to exactly 1 chat room. 
 \end{itemize}
-\section{Mock-up}
-\subsection{Tenant User Interface}
-\subsection{Landlord User Interface}
