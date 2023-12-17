@@ -1,0 +1,170 @@
+\documentclass[16pt]{report}
+\usepackage[utf8]{vntex, inputenc} % vntex first to avoid Vietnamese auto captions
+\usepackage[english]{babel}
+\usepackage{suthesis-ug}
+\usepackage{algorithm2e}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{authblk}
+\usepackage[labelfont=bf]{caption}
+\usepackage{cases}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage[unicode]{hyperref}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{biblatex}
+\usepackage{tabularray}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=black,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    citecolor=black,
+    }
+\urlstyle{same}
+% Global layout
+\usepackage{fancyhdr, graphicx, hyperref, indentfirst, lastpage, setspace, titlesec, enumitem}
+\usepackage[top=3.5cm, bottom=3.0cm, left=3.5cm, right=2.0cm]{geometry} % căn lề theo quy chuẩn KLTN
+% Encodings
+\usepackage{amsmath, amsthm, amssymb, gensymb}
+
+% Better table
+\usepackage{array, booktabs, multicol, multirow, siunitx}
+\usepackage{caption, float}
+\restylefloat{table} % The table does not float anymore
+% Code space
+% \usepackage[dvipsnames]{xcolor}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{minted} % needs --shell-escape flag
+\usepackage{listings} % to format code
+\usepackage{tikz}
+\pagestyle{fancy}
+\usepackage{array}
+\usepackage{longtable}
+\RestyleAlgo{ruled}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\setcounter{secnumdepth}{3}
+
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.9,0.9,0.9}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+
+\lstset{style=mystyle}
+
+
+\addbibresource{references.bib}
+\begin{document}
+\setstretch{1.25}
+\setlength{\parindent}{0pt}
+
+
+
+
+\begin{titlepage}
+\begin{center}
+\textbf{\fontsize{13pt}{18pt}\selectfont VIETNAM NATIONAL UNIVERSITY}\\
+\textbf{\fontsize{13pt}{18pt}\selectfont HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY}\\
+\textbf{\fontsize{13pt}{18pt}\selectfont FACULTY OF COMPUTER SCIENCE AND ENGINEERING}
+\end{center}
+
+\vspace{1cm}
+
+\begin{center}
+\begin{tabular}{c}
+{\fontsize{13pt}{18pt}\selectfont - SPECIALIZED PROJECT- }\\
+~~\\
+\hline
+\\
+% \multicolumn{1}{l}{\textbf{{\Large Assignment}}}\\
+\\
+\textbf{{\huge Develop application to help users}}\\
+\textbf{{\huge search for rooms to rent }}\\
+\\
+\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{1cm}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=6cm]{Images/BK.png}
+\end{center}
+\end{figure}
+
+
+
+\vspace{1cm}
+
+
+\begin{table}[h]
+\begin{tabular}{rll}
+\hspace{3 cm}
+& Thesis Committee: &Computer Science CS-CC 12\\
+& Supervisor: &Assoc. Prof. Phạm Trần Vũ, PhD\\
+& Reviewer: &M.S. Nguyễn Mạnh Thìn \\
+& Students: & Nguyễn Công Đạt - 2052942. \\
+& & Nguyễn Trần Minh Phước - 2052662\\
+\end{tabular}
+\end{table}
+
+
+\begin{center}
+{\footnotesize HO CHI MINH CITY, November 2023}
+\end{center}
+\end{titlepage}
+
+
+
+\input{Code/1.Declaration_of_Authenticity.tex}
+\input{Code/2.Acknowledgement.tex}
+\input{Code/3.Abstract.tex}
+\afterpreface
+
+\input{Code/4.Introduction.tex}
+\input{Code/5.Theoretical_Background.tex}
+\input{Code/6.Requirement_Analysis.tex}
+\input{Code/7.System_Modeling}
+\input{Code/8.Technology_Stack}
+\input{Code/9.Implementation.tex}
+% \input{Code/11.Result_and_Evaluation.tex}
+\input{Code/12.Conclusion.tex}
+\renewcommand{\bibname}{References}
+
+\printbibliography
+\appendix
+% \input{Code/workload.tex}
+% \input{Code/13.Apprendix.tex}
+
+\end{document}
