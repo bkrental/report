@@ -1,0 +1,105 @@
+\chapter{First Approach for System Architecture}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale = 0.3]{Images/mono_design.png}
+\end{center}
+\caption{Monolithic architecture design}
+\end{figure}
+In this approach, every module is packed into a tightly-coupled system. As the user message can be received in the form of text or voice, there are two ways to process input. If it is text-based, it will be transferred directly into a Natural Language Understanding module, which will classify the intents and entities of the sentence. On the other hand, voice-based will be processed by a Speech-to-Text module before into NLU. A Conversation Manager is in control of managing the flow of the conversation. Moreover, if the intent is a functional intent, an Answer Generator is used to find the answer. Lastly, a Machine Learning Pipeline module is used for creating an automated training pipeline.
+
+The idea behind a Monolithic approach is straightforward. Since our system can be divided into 3 big modules: A Chatbot, A Machine Reading Comprehension module, and an MLOps module, this approach provides a clear and comprehensive view at a component level. Furthermore, compared to the next approach, it is better to keep the first approach for the purpose of better understanding the system. However, a Monolithic architecture has some big challenges for our system:
+\begin{itemize}
+    \item With this design, it also means that we will have many separate Machine Learning models (1 for the Intent classifier, 1 for Named Entity Recognizer, 1 for MRC), and 2 Retrievers (1 for FAQ and 1 for Document). As a result, the system is expensive and inefficient.
+    \item It also suffers a scalability problem. With this many models, running the whole system is a problem. Therefore, it is almost impossible to scale this system.
+    \item Due to its tightly-coupled nature, it is also difficult to integrate a CI/CD and CT pipeline. As the whole system must be loaded all at once, if we want to deploy a new model, it must restart the system.
+\end{itemize}
+
+
+\chapter{Data preparation team}
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|c|}
+        \hline
+         \textbf{Full name} & \textbf{Student ID} \\
+         \hline
+         Phạm Văn Tâm & 2151254\\
+         \hline
+         Đỗ Nhật Quang & 2151246 \\
+         \hline
+         Lại Huy Anh & 2110725\\
+         \hline
+         Nguyễn Lê Hữu Quang & 2151247 \\
+         \hline
+         Nguyễn Hồ Phúc Nguyên & 2151236 \\
+         \hline
+         Lương Kim Long & 2151112 \\
+         \hline
+         Cao Minh Tuấn & 2151159 \\
+         \hline
+         Trần Hồng Lam & 2151218\\
+         \hline
+         Chu Thanh Đồng & 2151065 \\
+         \hline
+         Nguyễn Nam Vũ & 2151278 \\
+         \hline
+         Trần Trung Hiếu Nam & 2151122 \\
+         \hline
+         Trần Quang Nguyên Ánh & 2151047 \\
+         \hline
+         Lâm Hoàng Nhật & 2151238 \\
+         \hline
+         Đào Vũ Minh Trí & 2151153 \\
+         \hline
+         Lê Anh Tuấn & 2110643 \\
+         \hline
+         Nguyễn Hữu Đức & 2151189 \\
+         \hline
+         Trần Thị Minh Tâm & 2151032 \\
+         \hline
+         Nguyễn Giao Gia Bảo & 2110791 \\
+         \hline
+         Ngô Tiến Dũng & 2151185 \\
+         \hline
+         Vũ Huy Bảo & 2151177 \\
+         \hline
+         Đồng Trinh Hoàng Nguyên & 2151124 \\
+         \hline
+         Võ Hoàng Phúc & 2151029 \\
+         \hline
+         Văn Thiên Lâm & 2151110 \\
+         \hline
+         Nguyễn Gia Huy & 2151016 \\
+         \hline
+         Nguyễn Huy Hoàng & 2151197 \\
+         \hline
+         Phạm Minh Đạt & 2151007 \\
+         \hline
+         Phạm Gia Khang & 2151209 \\
+         \hline
+         Nguyễn Thái Bình Dương & 2051103 \\
+         \hline
+         Lâm Ngọc Cầm & 2151281 \\
+         \hline
+         Phạm Khắc Thanh Tùng & 2151274 \\
+         \hline
+         Nguyễn Thế Khang Hi & 2151070 \\
+         \hline
+         Võ Phú Thành & 2151259 \\
+         \hline
+         Huỳnh Lê Phi Long & 2151111 \\
+         \hline
+         Phạm Bình Dương & 2151283 \\
+         \hline
+         Nguyễn Xuân Khoa & 2051137 \\
+         \hline
+         Ngô Đình Anh Khoa & 2151212 \\
+         \hline
+         Trần Duy Trung Hiếu & 2151193 \\
+         \hline
+         Trần Quang Minh & 2151230 \\
+         \hline
+    \end{tabular}
+    \caption{Data preparation team}
+    \label{tab:my_label}
+\end{table}
