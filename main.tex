@@ -45,6 +45,10 @@
 \pagestyle{fancy}
 \usepackage{array}
 \usepackage{longtable}
+
+%% cover border %%
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
 \RestyleAlgo{ruled}
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
@@ -90,62 +94,63 @@
 
 
 
-\begin{titlepage}
-\begin{center}
-\textbf{\fontsize{13pt}{18pt}\selectfont VIETNAM NATIONAL UNIVERSITY}\\
-\textbf{\fontsize{13pt}{18pt}\selectfont HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY}\\
-\textbf{\fontsize{13pt}{18pt}\selectfont FACULTY OF COMPUTER SCIENCE AND ENGINEERING}
-\end{center}
+% \begin{titlepage}
+% \begin{center}
+% \textbf{\fontsize{13pt}{18pt}\selectfont VIETNAM NATIONAL UNIVERSITY}\\
+% \textbf{\fontsize{13pt}{18pt}\selectfont HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY}\\
+% \textbf{\fontsize{13pt}{18pt}\selectfont FACULTY OF COMPUTER SCIENCE AND ENGINEERING}
+% \end{center}
 
-\vspace{1cm}
+% \vspace{1cm}
 
-\begin{center}
-\begin{tabular}{c}
-{\fontsize{13pt}{18pt}\selectfont - SPECIALIZED PROJECT- }\\
-~~\\
-\hline
-\\
-% \multicolumn{1}{l}{\textbf{{\Large Assignment}}}\\
-\\
-\textbf{{\huge Develop application to help users}}\\
-\textbf{{\huge search for rooms to rent }}\\
-\\
-\\
-\hline
-\end{tabular}
-\end{center}
+% \begin{center}
+% \begin{tabular}{c}
+% {\fontsize{13pt}{18pt}\selectfont - SPECIALIZED PROJECT- }\\
+% ~~\\
+% \hline
+% \\
+% % \multicolumn{1}{l}{\textbf{{\Large Assignment}}}\\
+% \\
+% \textbf{{\huge Develop application to help users}}\\
+% \textbf{{\huge search for rooms to rent }}\\
+% \\
+% \\
+% \hline
+% \end{tabular}
+% \end{center}
 
-\vspace{1cm}
+% \vspace{1cm}
 
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=6cm]{Images/BK.png}
-\end{center}
-\end{figure}
-
-
-
-\vspace{1cm}
+% \begin{figure}[h!]
+% \begin{center}
+% \includegraphics[width=6cm]{Images/BK.png}
+% \end{center}
+% \end{figure}
 
 
-\begin{table}[h]
-\begin{tabular}{rll}
-\hspace{3 cm}
-& Thesis Committee: &Computer Science CS-CC 12\\
-& Supervisor: &Assoc. Prof. Phạm Trần Vũ, PhD\\
-& Reviewer: &M.S. Nguyễn Mạnh Thìn \\
-& Students: & Nguyễn Công Đạt - 2052942. \\
-& & Nguyễn Trần Minh Phước - 2052662\\
-\end{tabular}
-\end{table}
+
+% \vspace{1cm}
 
 
-\begin{center}
-{\footnotesize HO CHI MINH CITY, November 2023}
-\end{center}
-\end{titlepage}
+% \begin{table}[h]
+% \begin{tabular}{rll}
+% \hspace{3 cm}
+% & Thesis Committee: &Computer Science CS-CC 12\\
+% & Supervisor: &Assoc. Prof. Phạm Trần Vũ, PhD\\
+% & Reviewer: &M.S. Nguyễn Mạnh Thìn \\
+% & Students: & Nguyễn Công Đạt - 2052942. \\
+% & & Nguyễn Trần Minh Phước - 2052662\\
+% \end{tabular}
+% \end{table}
 
 
+% \begin{center}
+% {\footnotesize HO CHI MINH CITY, November 2023}
+% \end{center}
+% \end{titlepage}
+
+
+% \input{Code/0.Title_Page.tex}
 
 \input{Code/1.Declaration_of_Authenticity.tex}
 \input{Code/2.Acknowledgement.tex}
@@ -156,7 +161,7 @@
 \input{Code/5.Theoretical_Background.tex}
 \input{Code/6.Requirement_Analysis.tex}
 \input{Code/7.System_Modeling}
-\input{Code/8.Technology_Stack}
+% \input{Code/8.Technology_Stack}
 \input{Code/9.Implementation.tex}
 % \input{Code/11.Result_and_Evaluation.tex}
 \input{Code/12.Conclusion.tex}

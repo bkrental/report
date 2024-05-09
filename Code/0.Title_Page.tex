@@ -1,0 +1,80 @@
+% \setlength{\headheight}{40pt}
+% \pagestyle{fancy}
+% \fancyhead{} % clear all header fields
+% \fancyhead[L]{
+%  \begin{tabular}{rl}
+%     \begin{picture}(25,15)(0,0)
+%     \put(0,-8){\includegraphics[width=8mm, height=8mm]{assets/images/hcmut.png}}
+%     %\put(0,-8){\epsfig{width=10mm,figure=hcmut.eps}}
+%    \end{picture}&
+% 	%\includegraphics[width=8mm, height=8mm]{assets/images/hcmut.png} & %
+% 	\begin{tabular}{l}
+% 		\textbf{\bf \ttfamily Ho Chi Minh City University of Technology}\\
+% 		\textbf{\bf \ttfamily Faculty of Computer Science and Engineering}
+% 	\end{tabular} 	
+%  \end{tabular}
+% }
+% \fancyhead[R]{
+% 	\begin{tabular}{l}
+% 		\tiny \bf \\
+% 		\tiny \bf 
+% 	\end{tabular}  }
+% \fancyfoot{} % clear all footer fields
+% \fancyfoot[L]{ \ttfamily {Specialized Project - Semester 231}}
+% \fancyfoot[R]{ \ttfamily {Page {\thepage}/\pageref{LastPage}}}
+% \renewcommand{\headrulewidth}{0.7pt}
+% \renewcommand{\footrulewidth}{0.7pt}
+
+
+\begin{titlepage}
+    \begin{tikzpicture}[overlay,remember picture]
+    \draw [line width=3pt]
+           ($ (current page.north west) + (1.5cm,-2.0cm) $)
+        rectangle
+        ($ (current page.south east) + (-1.5cm,1.8cm) $);
+    \draw [line width=1pt]
+        ($ (current page.north west) + (1.65cm,-2.15cm) $)
+        rectangle
+        ($ (current page.south east) + (-1.65cm,1.95cm) $); 
+    \end{tikzpicture}
+    \begin{center}
+    \normalsize {\textbf{
+    VIETNAM NATIONAL UNIVERSITY - HO CHI MINH CITY \\
+    UNIVERSITY OF TECHNOLOGY \\
+    FACULTY OF COMPUTER SCIENCE AND ENGINEERING}}
+    \vspace{1cm}
+    
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=4cm]{../Images/BK.png}
+    \end{figure}
+    
+    \begin{center}
+    \textbf{{\large REPORT}}\\
+    \textbf{{\large SPECIALIZED PROJECT}}\\
+    \vspace{1cm}
+    {\fontsize{16}{18}\selectfont
+    \textbf{{DEVELOP APPLICATION TO HELP USER SEARCH FOR ROOM TO RENT}}\\
+    }
+    \vspace{1cm}
+    \textbf{{\large Major: Computer Science}}
+    \end{center}
+    
+    \vspace{1cm}
+    
+    \begin{table}[h]
+        \normalsize
+        \begin{tabular}{r r l}
+        \hspace{2 cm} & \textbf{THESIS COMMITTEE}: & Computer Science CS-CC 12 \\
+        & \textbf{SUPERVISORS}: & Assoc. Prof. Pham Tran Vu, PhD \\ 
+        & \textbf{MEMBER SECRETARY}: & M.S. Nguyen Manh Thin \\
+        & \textbf{STUDENT 1}: & Nguyen Cong Dat (2052942)\\
+        & \textbf{STUDENT 2}: & Nguyen Tran Minh Phuoc (2052662)\\ 
+        \end{tabular}
+    \end{table}
+    \vspace{2cm}
+    
+    Ho Chi Minh City, December 2023
+    
+    \end{center}
+\end{titlepage}
